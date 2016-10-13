@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void render() {
 
-        LayoutBuilder layoutBuilder = new LayoutBuilderFactory().getDataAndViewParsingLayoutBuilder(layouts);
+        LayoutBuilder layoutBuilder = new LayoutBuilderFactory().getDataParsingLayoutBuilder();
 
         ProteusView view = layoutBuilder.build(container, layout, data, 0, styles);
 
