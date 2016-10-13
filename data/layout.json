@@ -1,0 +1,56 @@
+{
+  "type": "LinearLayout",
+  "layout_width": "match_parent",
+  "layout_height": "match_parent",
+  "padding": "16dp",
+  "orientation": "vertical",
+  "children": [{
+    "type": "TextView",
+    "layout_width": "wrap_content",
+    "layout_height": "wrap_content",
+    "textSize": "16sp",
+    "text": "~Hello {{name}}"
+  }, {
+    "type": "TextView",
+    "layout_width": "wrap_content",
+    "layout_height": "wrap_content",
+    "textSize": "16sp",
+    "text": "~{{location.country}}, {{location.city}} - {{location.pincode}}"
+  }, {
+    "type": "HorizontalProgressBar",
+    "layout_height": "16dp",
+    "layout_width": "match_parent",
+    "max": "$experience.max",
+    "progress": "$experience.current"
+  }, {
+    "type": "TextView",
+    "layout_width": "wrap_content",
+    "layout_height": "wrap_content",
+    "style": "money.center",
+    "padding": "8dp",
+    "text": "~{{credits}}$(number) units",
+    "background": {
+      "type": "shape",
+      "shape":"oval",
+      "children": [
+        {
+          "type": "gradient",
+          "startColor": "#aaaa3411",
+          "endColor": "#DDefefef",
+          "angle": "90"
+        }
+      ]
+    },
+    "animation": {
+      "interpolator": {
+        "type":"anticipateOvershootInterpolator"
+      },
+      "type": "rotate",
+      "fromDegrees": "-720",
+      "toDegrees": "0",
+      "pivotX": "50%",
+      "pivotY": "50%",
+      "duration": "1500"
+    }
+  }]
+}
