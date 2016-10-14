@@ -12,6 +12,8 @@ import android.view.ViewGroup;
 
 import com.flipkart.android.proteus.builder.LayoutBuilder;
 import com.flipkart.android.proteus.builder.LayoutBuilderFactory;
+import com.flipkart.android.proteus.parser.Parser;
+import com.flipkart.android.proteus.parser.WrappableParser;
 import com.flipkart.android.proteus.toolbox.Styles;
 import com.flipkart.android.proteus.view.ProteusView;
 import com.google.gson.JsonObject;
@@ -61,11 +63,18 @@ public class MainActivity extends AppCompatActivity {
 
         LayoutBuilder layoutBuilder = new LayoutBuilderFactory().getDataParsingLayoutBuilder();
 
+        registerCustomViews(layoutBuilder);
+
         ProteusView view = layoutBuilder.build(container, layout, data, 0, styles);
 
         container.removeAllViews();
         container.addView((View) view);
 
+    }
+
+    private void registerCustomViews(LayoutBuilder layoutBuilder) {
+        Parser parser = (Parser) layoutBuilder.getHandler("View");
+        layoutBuilder.registerHandler("CircleView", new CircleViewParser(parser));
     }
 
     private void fetch() {

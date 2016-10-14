@@ -5,6 +5,12 @@
   "padding": "16dp",
   "orientation": "vertical",
   "children": [{
+    "type": "CircleView",
+    "layout_width": "180dp",
+    "layout_height": "180dp",
+    "layout_gravity": "center",
+    "color": "#ad6744"
+  }, {
     "type": "TextView",
     "layout_width": "wrap_content",
     "layout_height": "wrap_content",
