@@ -6,7 +6,7 @@
 * open a terminal
 * cd into the project directory
 * run `npm install`
-* run `sh start-start-server.sh`
+* run `sh start-server.sh`
 * Start an AVD emulator
 * Install the Demo App
 
