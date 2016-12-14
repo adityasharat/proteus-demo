@@ -1,5 +1,7 @@
 # proteus-demo
 
+deprecated. check out [proteus ](https://github.com/flipkart-incubator/proteus)
+
 ## Setting up the Demo App
 
 * Install NodeJS [here](https://nodejs.org/en/download/)
