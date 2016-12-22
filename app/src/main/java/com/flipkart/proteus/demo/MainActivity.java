@@ -13,7 +13,6 @@ import android.view.ViewGroup;
 import com.flipkart.android.proteus.builder.LayoutBuilder;
 import com.flipkart.android.proteus.builder.LayoutBuilderFactory;
 import com.flipkart.android.proteus.parser.Parser;
-import com.flipkart.android.proteus.parser.WrappableParser;
 import com.flipkart.android.proteus.toolbox.Styles;
 import com.flipkart.android.proteus.view.ProteusView;
 import com.google.gson.JsonObject;
@@ -29,7 +28,7 @@ import retrofit2.http.Path;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String BASE_URL = "http://10.0.2.2:8080/data/";
+    private static final String BASE_URL = "http://10.0.2.2:8081/data/";
     private Retrofit retrofit;
     private JsonResource resources;
     private JsonObject data;
@@ -61,20 +60,21 @@ public class MainActivity extends AppCompatActivity {
 
     private void render() {
 
+        container.removeAllViews();
+
         LayoutBuilder layoutBuilder = new LayoutBuilderFactory().getDataParsingLayoutBuilder();
 
         registerCustomViews(layoutBuilder);
 
         ProteusView view = layoutBuilder.build(container, layout, data, 0, styles);
 
-        container.removeAllViews();
         container.addView((View) view);
 
     }
 
-    private void registerCustomViews(LayoutBuilder layoutBuilder) {
-        Parser parser = (Parser) layoutBuilder.getHandler("View");
-        layoutBuilder.registerHandler("CircleView", new CircleViewParser(parser));
+    private void registerCustomViews(LayoutBuilder builder) {
+        Parser frameLayoutParser = (Parser) builder.getHandler("FrameLayout");
+        builder.registerHandler("CardView", new CardViewParser(frameLayoutParser));
     }
 
     private void fetch() {
