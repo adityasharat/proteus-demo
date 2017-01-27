@@ -1,6 +1,6 @@
-# proteus-demo
+# Proteus Demo [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/adityasharat?utm_source=github&utm_medium=button&utm_term=adityasharat&utm_campaign=github)
 
-deprecated. check out [proteus ](https://github.com/flipkart-incubator/proteus)
+Check out [proteus](https://github.com/flipkart-incubator/proteus)
 
 ## Setting up the Demo App
 
