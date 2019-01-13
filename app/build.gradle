@@ -21,6 +21,12 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation('com.github.bumptech.glide:glide:4.7.1') {
+        exclude group: "com.android.support"
+    }
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
 
     implementation 'com.github.flipkart-incubator.proteus:proteus-core:5.0.0-rc14'
     implementation 'com.github.flipkart-incubator.proteus:gson-adapter:5.0.0-rc14'
