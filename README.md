@@ -1,4 +1,4 @@
-# Proteus Demo [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/adityasharat?utm_source=github&utm_medium=button&utm_term=adityasharat&utm_campaign=github)
+# Proteus Demo [![Build Status](https://travis-ci.org/adityasharat/proteus-demo.svg?branch=master)](https://travis-ci.org/adityasharat/proteus-demo)
 
 Check out [proteus](https://github.com/flipkart-incubator/proteus)
 
